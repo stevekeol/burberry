@@ -20,7 +20,7 @@ pub use log_collector::LogCollector;
 #[cfg(feature = "ethereum")]
 pub use logs_in_block_collector::LogsInBlockCollector;
 #[cfg(feature = "ethereum")]
-pub use mempool_collector::{MempoolFullCollector, MempoolHashesCollector};
+pub use mempool_collector::{MempoolCollector, MempoolFullCollector};
 #[cfg(feature = "ethereum")]
 pub use poll_full_block_collector::PollFullBlockCollector;
 

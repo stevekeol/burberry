@@ -49,18 +49,18 @@ impl Collector<Transaction> for MempoolFullCollector {
 
 // Hashes Collector from mempool.
 
-pub struct MempoolHashesCollector {
+pub struct MempoolCollector {
     provider: Arc<dyn Provider<PubSubFrontend>>,
 }
 
-impl MempoolHashesCollector {
+impl MempoolCollector {
     pub fn new(provider: Arc<dyn Provider<PubSubFrontend>>) -> Self {
         Self { provider }
     }
 }
 
 #[async_trait]
-impl Collector<Transaction> for MempoolHashesCollector {
+impl Collector<Transaction> for MempoolCollector {
     fn name(&self) -> &str {
         "MempoolCollector"
     }
